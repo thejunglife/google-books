@@ -1,4 +1,4 @@
-import React, { createContext } from 'react'
+import { createContext } from 'react'
 
 const SearchContext = createContext({
   book: '',
@@ -9,3 +9,4 @@ const SearchContext = createContext({
 })
 
 export default SearchContext
+

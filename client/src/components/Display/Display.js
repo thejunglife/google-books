@@ -11,11 +11,11 @@ const { books, saveBook } = useContext(SearchContext)
       
       books.map(book => book.items.map((next, i) => (
         <div>
-    <button><a href={next.volumeInfo.infoLink} target='_blank'>View</a></button>
-    <button onClick={saveBook} id={next.volumeInfo.title}>Save</button> 
+    <button><a href={next.volumeInfo.infoLink} target='_blank' rel="noopener noreferrer">View</a></button>
+    <button onClick={saveBook} id={i}>Save</button> 
       <h1 key={i}>{next.volumeInfo.title}</h1>
       <h3>{next.volumeInfo.authors}</h3>
-     <img src={next.volumeInfo.imageLinks.smallThumbnail} alt='No Image Available' />
+     <img src={next.volumeInfo.imageLinks.smallThumbnail} alt='no' />
      <p>{next.volumeInfo.description}</p>
       </div>
       )))

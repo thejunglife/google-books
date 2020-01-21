@@ -1,9 +1,9 @@
 module.exports = (model, Schema) => {
   const Book = new Schema({
       title: String,
-      authors: String,
+      tags: [{type: String}],
       description: String,
-      image: String,
+      img: String,
       link: String,
       isSaved: Boolean
   })
