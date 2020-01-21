@@ -4,16 +4,16 @@ import SearchContext from '../../utils/SearchContext'
 
 const Search = () => {
 
-const { book } = useContext(SearchContext)
+const { book, handleInputChange, handleInputForm } = useContext(SearchContext)
 
   return(
     <form>
       <p>
-        <label htmlFor="search">search</label>
-        <input type='text' name='search' id='search'/>
+        <label htmlFor="book">book</label>
+        <input type='text' name='book' id='book' value={book} onChange={handleInputChange}/>
       </p>
       <p>
-        <button>Search</button>
+        <button onClick={handleInputForm}>Search</button>
       </p>
     </form>
   )

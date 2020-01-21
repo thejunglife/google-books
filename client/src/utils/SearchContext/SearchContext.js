@@ -2,7 +2,10 @@ import React, { createContext } from 'react'
 
 const SearchContext = createContext({
   book: '',
-  handleInputChange: () => {}
+  books: [],
+  handleInputChange: () => {},
+  handleInputForm: () => {},
+  saveBook: () => {}
 })
 
 export default SearchContext
