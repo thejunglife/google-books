@@ -3,6 +3,7 @@ import SearchContext from '../../utils/SearchContext'
 
 import Search from '../../components/Search'
 import Display from '../../components/Display'
+import NavBar from '../../components/NavBar'
 
 import axios from 'axios'
 
@@ -25,6 +26,7 @@ const SearchPage = () => {
     event.preventDefault()
     axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchState.book}`)
     .then(({ data }) => {
+      console.log(data)
    let books = JSON.parse(JSON.stringify(searchState.books))
    let book = ''
    books = []
@@ -43,13 +45,14 @@ const SearchPage = () => {
        authors: next.volumeInfo.authors,
        description: next.volumeInfo.description,
        img: next.volumeInfo.imageLinks.smallThumbnail,
-       link: next.volumeInfo.InfoLink,
+       link: next.volumeInfo.infoLink,
        isSaved: true
      }
      bookInfo.push(bookObj)
      }))
      let savedBook = bookInfo[event.target.id]
      console.log(savedBook)
+     console.log(event.target.id)
     axios.post(`/books`, savedBook)
       .then(() => {
         console.log('success')
@@ -66,6 +69,7 @@ const SearchPage = () => {
 
   return (
     <SearchContext.Provider value={searchState}>
+      <NavBar />
         <Search />
         <Display />
     </SearchContext.Provider>

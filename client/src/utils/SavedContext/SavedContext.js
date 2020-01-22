@@ -1,7 +1,8 @@
 import { createContext } from 'react'
 
 const SavedContext = createContext({
-        book2: ''
+        savedBooks: [],
+        handleRemoveBook: () => {}
 })
 
 export default SavedContext

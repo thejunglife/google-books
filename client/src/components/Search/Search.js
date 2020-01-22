@@ -2,11 +2,13 @@ import React, { useContext} from 'react'
 import SearchContext from '../../utils/SearchContext'
 
 
+
+
 const Search = () => {
 
 const { book, handleInputChange, handleInputForm } = useContext(SearchContext)
 
-  return(
+  return (
     <form>
       <p>
         <label htmlFor="book">book</label>
@@ -16,6 +18,7 @@ const { book, handleInputChange, handleInputForm } = useContext(SearchContext)
         <button onClick={handleInputForm}>Search</button>
       </p>
     </form>
+
   )
 }
 

@@ -14,8 +14,6 @@ const App = () => {
 
 <Router>
   <div>
-    <Link to='/'>Search</Link>
-    <Link to='/saved'>Saved</Link>
     <Switch>
         <Route exact path='/'>
             <SearchPage />
