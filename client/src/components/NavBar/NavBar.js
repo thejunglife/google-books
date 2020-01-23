@@ -40,7 +40,6 @@ const NavBar = () => {
           <Typography variant="h6" className={classes.title}>
             <Link to="/saved">Saved</Link>
           </Typography>
-          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </div>
