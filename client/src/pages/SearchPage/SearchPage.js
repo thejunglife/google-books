@@ -39,7 +39,9 @@ const SearchPage = () => {
   searchState.saveBook = event => {
     let bookInfo = []
 
-    searchState.books.map(book => book.items.map(next => {
+    searchState.books.map(book =>
+     book.items.map(next => 
+      {
      let bookObj = {
        title: next.volumeInfo.title,
        authors: next.volumeInfo.authors,
@@ -48,8 +50,8 @@ const SearchPage = () => {
        link: next.volumeInfo.infoLink,
        isSaved: true
      }
-     bookInfo.push(bookObj)
-     }))
+     return bookInfo.push(bookObj)
+     } ))
      let savedBook = bookInfo[event.target.id]
      console.log(savedBook)
      console.log(event.target.id)

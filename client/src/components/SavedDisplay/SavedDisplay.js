@@ -1,22 +1,22 @@
 import React, { useContext } from 'react'
 import SavedContext from '../../utils/SavedContext'
 
-import { makeStyles } from '@material-ui/core/styles'
+// import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 
-const useStyles = makeStyles({
-  card: {
-    maxWidth: 345
-  },
-  media: {
-    height: 140
-  }
-})
+// const useStyles = makeStyles({
+//   card: {
+//     maxWidth: 345
+//   },
+//   media: {
+//     height: 140
+//   }
+// })
 
 const SavedDisplay = () => {
 
 
-  const classes = useStyles()
+  // const classes = useStyles()
   
 const { savedBooks, handleRemoveBook } = useContext(SavedContext)
 
