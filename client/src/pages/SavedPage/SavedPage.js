@@ -32,7 +32,7 @@ savedState.handleRemoveBook = (id) => {
           console.log(savedBooks)
         })
         .catch(e => console.error(e))
-   // eslint-disable-next-line
+  //  eslint-disable-next-line
   }, [])
   
   return (
@@ -45,3 +45,4 @@ savedState.handleRemoveBook = (id) => {
 }
 
 export default SavedPage
+
